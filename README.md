@@ -12,8 +12,8 @@
 | birthday	        | date	  | null: false  |
 
 ### Association
- has_many :items
- has_many :purchases
+- has_many :items
+- has_many :purchases
 
 
 ## itemsテーブル
@@ -31,8 +31,8 @@
 | user	            | references |	null: false, foreign_key: true |
 
 ### Association
-belongs_to :user
-has_one :purchase
+- belongs_to :user
+- has_one :purchase
 
 ## purchasesテーブル
 
@@ -42,9 +42,9 @@ has_one :purchase
 | item	    | references | null: false, foreign_key: true  |
 
 ### Association
-belongs_to :item
-belongs_to :user
-has_one :shipping_address
+- belongs_to :item
+- belongs_to :user
+- has_one :shipping_address
 
 ## shipping_addressテーブル
 
@@ -59,4 +59,4 @@ has_one :shipping_address
 | purchase_id	      | integer	   | null: false  |
 
 ### Association
-belongs_to : purchase
+- belongs_to : purchase
