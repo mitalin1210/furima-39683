@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :genre_prefecture
   belongs_to :user, optional: true
   has_one :order
-  has_many :comments
+  
 
   with_options presence: true do
     validates :image
