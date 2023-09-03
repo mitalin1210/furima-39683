@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :item do
+    
     product_name                  { 'test' }
     description                   { 'test' }
     genre_id                      { 3 }
@@ -8,6 +9,7 @@ FactoryBot.define do
     genre_shipping_day_id         { 2 }
     genre_prefecture_id           { 3 }
     selling_price                 { 500 }
+    user_id                       { nil }
 
     after(:build) do |item|
       item.image.attach(io: File.open('public/test_image.png'), filename: 'test_image.png')

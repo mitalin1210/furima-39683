@@ -97,6 +97,11 @@ RSpec.describe Item, type: :model do
         @item.selling_price = '５０００'
         @item.valid?
         expect(@item.errors.full_messages).to include("Selling price is not a number")
+      end 
+      it 'ユーザー登録している人でないと出品できない' do
+        @item.user_id = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User can't be blank")
       end
     end
   end
