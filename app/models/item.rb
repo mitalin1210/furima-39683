@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :genre
   belongs_to_active_hash :genre_prefecture
   belongs_to :user
-  # has_one :order
+  has_one :order
   
 
   with_options presence: true do
