@@ -4,10 +4,10 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @item.product_name %>
+      <%= @item.product_name %> 
     </h2>
     <div class="item-img-content">
-      <%= image_tag @item.image ,class:"item-box-img" %> 
+      <%= image_tag @item.image ,class:"item-box-img" %>  
       <%# <div class="sold-out">
         <span>Sold Out!!</span>
       </div> %>
@@ -24,7 +24,7 @@
 
     <% if user_signed_in? %>
     <% if current_user.id == @item.user_id %> 
-      <%= link_to "商品の編集", "#", method: :get, class: "item-red-btn" %>
+      <%= link_to '商品の編集',  edit_item_path, data: { turbo: false } , method: :get, class: "item-red-btn" %>
         <p class='or-text'>or</p>
       <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
     <% elsif current_user.id != @item.user_id %> 

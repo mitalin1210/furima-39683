@@ -131,7 +131,8 @@
       <% if @items.present? %>
       <% @items.each do |item| %>  
       <li class='list'>
-        <%= link_to item_path(item.id), method: :get do %>
+        <% if @items.present? %>
+          <% @items.each do |item| %> 
         <div class='item-img-content'>
          <%= image_tag item.image, class: "item-img" %>
 
@@ -169,8 +170,7 @@
       <% end %>
     <% end %>
 
-    
-    <%# <% if @items == [] %>  
+     
 
       <% if @items == [] %>
 
