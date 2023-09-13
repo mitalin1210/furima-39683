@@ -28,7 +28,7 @@
       <%= link_to '商品の編集', edit_item_path, data: { turbo: false } , method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
       <%= button_to '削除', item_path(@item), method: :delete, class: "item-destroy" %>
-    <% elsif current_user.id != @item.user_id && @item.order == nil %> 
+    <% elsif current_user.id = @item.user_id && @item.order == nil %> 
       <%= link_to '購入画面に進む', item_orders_path(@item.id) ,class:"item-red-btn"%>
     <% else %>
       <% end %>

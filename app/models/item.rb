@@ -14,7 +14,7 @@ class Item < ApplicationRecord
     validates :image
     validates :product_name
     validates :description
-    validates :selling_price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 999999999 }
+    validates :selling_price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
     validates :genre_shipping_cost_id
     validates :genre_shipping_day_id
     validates :genre_status_id
